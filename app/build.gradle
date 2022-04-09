@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    // unresolved reference error 방지 코드
     id 'kotlin-android-extensions'
 }
 

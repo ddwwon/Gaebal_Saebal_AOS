@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/my_log_toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/translucent"-->
+<!--        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"-->
+<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+
     <FrameLayout
         android:id="@+id/bottom_navigation_frame"
         android:layout_width="0dp"
