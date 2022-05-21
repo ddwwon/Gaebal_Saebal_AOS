@@ -8,4 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="translucent">#00000000</color>
+
+    <!--                android:startColor="#FA00FF"-->
+    <!--                android:endColor="#376FFF"/>-->
+    <color name="main_purple">#FA00FF</color>
+    <color name="main_blue">#376FFF</color>
+    <color name="underline_gray">#d7d7d7</color>
+    <color name="right_arrow">#767676</color>
+    <color name="default_font">#2F2F2F</color>
 </resources>

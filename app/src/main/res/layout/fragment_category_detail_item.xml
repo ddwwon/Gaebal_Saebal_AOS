@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/category_detail_item_textview_border"
+    android:layout_margin="10sp"
+    android:paddingBottom="10sp"
+    android:paddingTop="10sp"
+    android:paddingLeft="30sp"
+    android:paddingRight="30sp"
+    android:elevation="10sp">
+
+    <TextView
+        android:id="@+id/category_detail_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2022/05/18 11:40PM"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/category_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C언어로 스택 구현하기"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/category_detail_date"
+        app:layout_constraintBottom_toTopOf="@id/category_detail_tag"/>
+
+    <TextView
+        android:id="@+id/category_detail_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#Python #스택"
+        android:bufferType="spannable"
+        android:textSize="13sp"
+        android:textColor="@color/main_purple"
+        app:layout_constraintTop_toBottomOf="@id/category_detail_title"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
