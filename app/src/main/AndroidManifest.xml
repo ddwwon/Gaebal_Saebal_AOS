@@ -18,8 +18,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+<!--        갤러리에서 이미지 가져오기 위한거, 없어도 무관-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
     </application>
 
+    <!-- 인터넷 권한 -->
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <!-- 갤러리 권한 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- 카메라 권한 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+<!--    ??-->
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+
 </manifest>
+

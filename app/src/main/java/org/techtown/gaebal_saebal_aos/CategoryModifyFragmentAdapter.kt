@@ -6,17 +6,16 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-// private val dataSet: ArrayList<MyLogData>
-class MyLogFragmentAdapter(private val dataSet: ArrayList<MyLogData>) :
-    RecyclerView.Adapter<MyLogFragmentAdapter.ViewHolder> () {
+class CategoryModifyFragmentAdapter(private val dataSet: ArrayList<CategoryTitleData>) :
+    RecyclerView.Adapter<CategoryModifyFragmentAdapter.ViewHolder> () {
 
     // 불러온 데이터 형식
-    var datas = mutableListOf<MyLogData>()
+    var datas = mutableListOf<CategoryTitleData>()
 
     // adapter 생성
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         // view에 보여줄 데이터 layout
-        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.fragment_my_log_item,viewGroup,false)
+        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.fragment_category_modify_item,viewGroup,false)
         return ViewHolder(view)
     }
 
@@ -47,20 +46,10 @@ class MyLogFragmentAdapter(private val dataSet: ArrayList<MyLogData>) :
     // data를 MyLogdata에 설정한 대로 데이터 지정(?) 이란 말이 맞나,,,
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        private val Title: TextView = itemView.findViewById(R.id.my_log_title)
-        private val Content1: TextView = itemView.findViewById(R.id.my_log_content1)
-        private val Content2: TextView = itemView.findViewById(R.id.my_log_content2)
-        private val Content3: TextView = itemView.findViewById(R.id.my_log_content3)
-        private val Content4: TextView = itemView.findViewById(R.id.my_log_content4)
-        private val Content5: TextView = itemView.findViewById(R.id.my_log_content5)
+        private val Title: TextView = itemView.findViewById(R.id.category_modify_title)
 
-        fun bind(item: MyLogData) {
+        fun bind(item: CategoryTitleData) {
             Title.text = item.title
-            Content1.text = item.content1
-            Content2.text = item.content2
-            Content3.text = item.content3
-            Content4.text = item.content4
-            Content5.text = item.content5
         }
     }
 }

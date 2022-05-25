@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20sp"
+    android:layout_margin="10sp"
+    android:background="@drawable/category_detail_item_textview_border">
+
+    <TextView
+        android:id="@+id/category_modify_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="자료구조"
+        android:textStyle="bold"
+        android:elevation="10sp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

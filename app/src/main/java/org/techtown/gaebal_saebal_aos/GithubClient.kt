@@ -30,6 +30,11 @@ data class GithubRepo( // public 한정^^ ㅎㅎ 유저 아이디만 알면 되�
     @SerializedName("created_at") val created_at: String
 )
 
+//data class GithubRepo (
+//    @SerializedName("sha") val sha: String,
+//    @SerializedName("commit") val commit: String
+//)
+
 interface GithubService {
     @GET("users/{owner}/repos")
     fun getRepos(@Path("owner") owner: String) : Single<List<GithubRepo>>
