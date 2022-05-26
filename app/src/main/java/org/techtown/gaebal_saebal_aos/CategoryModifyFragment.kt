@@ -1,9 +1,11 @@
 package org.techtown.gaebal_saebal_aos
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +17,16 @@ class CategoryModifyFragment: Fragment(){
     lateinit var mLayoutManager: LinearLayoutManager
 
     var activity: MainActivity? = null
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        activity = getActivity() as MainActivity
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        activity = null
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +42,12 @@ class CategoryModifyFragment: Fragment(){
 
         mLayoutManager.orientation = LinearLayoutManager.VERTICAL
         recycler.layoutManager = mLayoutManager
+
+        val back_btn = view.findViewById<ImageButton>(R.id.cate_modify_back_btn)
+        back_btn.setOnClickListener{
+            activity?.onFragmentChange(12)
+            println("카테고리 수정 ")
+        }
 
         setListView()
         return view

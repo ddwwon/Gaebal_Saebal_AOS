@@ -3,10 +3,9 @@ package org.techtown.gaebal_saebal_aos
 import android.app.Dialog
 import android.content.Context
 import android.view.WindowManager
-import android.widget.EditText
-import kotlinx.android.synthetic.main.boj_problem_dialog.*
+import kotlinx.android.synthetic.main.text_over_dialog.*
 
-class BojDialog (context: Context) {
+class TextZeroDialog(context: Context) {
 
     private val dialog = Dialog(context)
     private lateinit var onClickListener: OnDialogClickListener
@@ -18,17 +17,13 @@ class BojDialog (context: Context) {
 
     fun showDialog()
     {
-        dialog.setContentView(R.layout.boj_problem_dialog)
+        dialog.setContentView(R.layout.text_zero_dialog)
         dialog.window!!.setLayout(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT)
         dialog.setCanceledOnTouchOutside(true)
         dialog.setCancelable(true)
         dialog.show()
 
-        dialog.boj_cancel_btn.setOnClickListener{
-            dialog.dismiss()
-        }
-
-        dialog.boj_ok_btn.setOnClickListener{
+        dialog.text_over_dialog_ok_btn.setOnClickListener{
             dialog.dismiss()
         }
     }

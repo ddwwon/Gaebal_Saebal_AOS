@@ -73,11 +73,16 @@ class MyLogFragment : Fragment(){
     private fun setListView() {
         datas.apply {
 //            add(MyLogData(title = "BOJ", content1 = "흠냐륑", content2 = "", content3 = "", content4 = "", content5 = "") )
-            add(MyLogData(title = "BOJ", content1 = "흠냐륑", content2 = "", content3 = "", content4 = "", content5 = "") )
-            add(MyLogData(title = "BOJ1", content1 = "흠냐륑1", content2 = "버블버블1", content3 = "", content4 = "", content5 = ""))
-            add(MyLogData(title = "BOJ2", content1 = "흠냐륑2", content2 = "버블버블2", content3 = "니나노", content4 = "", content5 = ""))
-            add(MyLogData(title = "BOJ3", content1 = "흠냐륑3",  content2 = "버블버블3", content3 = "니나노1", content4 = "ㅇ아아", content5 = ""))
-            add(MyLogData(title = "BOJ4", content1 = "흠냐륑4", content2 = "버블버블4", content3 = "ㄴ나노2", content4 = "아아아", content5 = "nulㅇㄹ알"))
+//            add(MyLogData(title = "BOJ", content1 = "흠냐륑", content2 = "", content3 = "", content4 = "", content5 = "") )
+//            add(MyLogData(title = "BOJ1", content1 = "흠냐륑1", content2 = "버블버블1", content3 = "", content4 = "", content5 = ""))
+//            add(MyLogData(title = "BOJ2", content1 = "흠냐륑2", content2 = "버블버블2", content3 = "니나노", content4 = "", content5 = ""))
+//            add(MyLogData(title = "BOJ3", content1 = "흠냐륑3",  content2 = "버블버블3", content3 = "니나노1", content4 = "ㅇ아아", content5 = ""))
+//            add(MyLogData(title = "BOJ4", content1 = "흠냐륑4", content2 = "버블버블4", content3 = "ㄴ나노2", content4 = "아아아", content5 = "nulㅇㄹ알"))
+            add(MyLogData(1, "자료구조", "연결리스트 종류", null, null, null, null))
+            add(MyLogData(2, "AOS", "동적으로 데이터 할당 개빢새", "이게 실활까?", null, null, null))
+            add(MyLogData(3, "CS", "운영체제", "리눅스", "컴퓨터 구조", null, null))
+            add(MyLogData(4, "미정", "untitle1", "untitle2", "untitle3", "untitle4", null))
+            add(MyLogData(5, "일기", "킹받아", "어쩔시크릿쥬쥬", "코난", "벼락부자", "노트북 샀다"))
 
             myLogadapter.datas = datas
             myLogadapter.notifyDataSetChanged()

@@ -14,7 +14,7 @@ class LogWriteFragmentAdapter{
 //    }
 
     // data bind
-    fun onBindViewHolder(holder: MyLogFragmentAdapter.ViewHolder, position: Int) {
+    fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // 카테고리 클릭 리스너
         holder.itemView.setOnClickListener{
             itemClickListener.onClick(it, position)

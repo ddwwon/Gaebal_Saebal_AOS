@@ -48,6 +48,11 @@ class CategoryDetailFragment : Fragment() {
             activity?.onFragmentChange(2)
         }
 
+        val back_btn = view.findViewById<ImageButton>(R.id.back_btn)
+        back_btn.setOnClickListener {
+            activity?.onFragmentChange(6)
+        }
+
         return view
     }
 

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
@@ -36,10 +37,15 @@ class MySettingFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_my_setting, container, false)
 
-        // 기록 작성 버튼 클릭시, 기록 작성 프레그먼트로 전환
-        val btn_log_write = view.findViewById<Button>(R.id.setting_category_btn)
-        btn_log_write.setOnClickListener {
-            activity?.onFragmentChange(7)
+        // 깃허브 사용자 클릭시, GoGitSetFragment로 전환
+        val git_setting_btn = view.findViewById<AppCompatButton>(R.id.git_setting_btn)
+        git_setting_btn.setOnClickListener {
+            activity?.onFragmentChange(10)
+        }
+
+        val setting_category_btn = view.findViewById<AppCompatButton>(R.id.setting_category_btn)
+        setting_category_btn.setOnClickListener {
+            activity?.onFragmentChange(11)
         }
 
         return view

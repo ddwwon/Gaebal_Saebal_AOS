@@ -3,10 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/drawable/category_detail_item_textview_border.xml" value="0.1765" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/drawable/code_icon.xml" value="0.2275" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/drawable/ic_code_icon.xml" value="0.2275" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/drawable/log_write_buttom_border.xml" value="0.1765" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/drawable/search_edittext_border.xml" value="0.1765" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_category_detail.xml" value="0.22871376811594202" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_category_modify.xml" value="0.16614583333333333" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_github.xml" value="0.2265625" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_go_git_set.xml" value="0.22871376811594202" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_information.xml" value="0.22871376811594202" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_setting.xml" value="0.16261398176291794" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.111" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/drawable-v24/github_icon.xml" value="0.196" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.196" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/drawable/btn_radius_border.xml" value="0.3615" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/drawable/camera_icon.xml" value="0.5445" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/drawable/category_choice_btn.xml" value="0.41" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/drawable/category_choice_btn_outline_selector.xml" value="0.409" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/drawable/category_detail_item_textview_border.xml" value="0.5445" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/drawable/folder_icon.xml" value="0.5445" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/drawable/gaebal_saebal_logo.xml" value="0.34427083333333336" />
@@ -42,6 +56,10 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_information.xml" value="0.17603850050658562" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_log.xml" value="0.33" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_log_item.xml" value="0.5510416666666667" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_log_item2.xml" value="0.4109375" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_log_item3.xml" value="0.40989583333333335" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_log_item4.xml" value="0.4109375" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_log_item5.xml" value="0.4109375" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_setting.xml" value="0.4109375" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_search.xml" value="0.23515625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/log_write_bottom_sheet.xml" value="0.22" />
@@ -49,6 +67,8 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/my_log_fragment.xml" value="0.3140625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/my_log_fragment_item.xml" value="0.67" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/my_log_fragment_list_outline.xml" value="0.18161094224924013" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/text_over_dialog.xml" value="0.5510416666666667" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/layout/text_zero_dialog.xml" value="0.32135416666666666" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/menu/bottom_menu.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/menu/my_log_toolbar.xml" value="0.328125" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Gaebal_Saebal_AOS/app/src/main/res/xml/provider_paths.xml" value="0.3619791666666667" />
