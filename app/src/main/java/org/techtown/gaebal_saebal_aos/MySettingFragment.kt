@@ -40,12 +40,12 @@ class MySettingFragment : Fragment() {
         // 깃허브 사용자 클릭시, GoGitSetFragment로 전환
         val git_setting_btn = view.findViewById<AppCompatButton>(R.id.git_setting_btn)
         git_setting_btn.setOnClickListener {
-            activity?.onFragmentChange(10)
+            activity?.onFragmentChange("GoGitSetFragment")
         }
 
         val setting_category_btn = view.findViewById<AppCompatButton>(R.id.setting_category_btn)
         setting_category_btn.setOnClickListener {
-            activity?.onFragmentChange(11)
+            activity?.onFragmentChange("CategoryModifyFragment")
         }
 
         return view

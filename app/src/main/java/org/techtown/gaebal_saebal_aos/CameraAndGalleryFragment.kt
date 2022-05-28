@@ -44,17 +44,17 @@ class CameraAndGalleryFragment : BottomSheetDialogFragment() {
     ): View? {
         val view: View = inflater!!.inflate(R.layout.fragment_camera_and_gallery, container, false)
 
-        val camera_btn = view.findViewById<AppCompatImageButton>(R.id.camera_btn)
-        camera_btn.setOnClickListener{
-            activity?.onFragmentChange(6)
-            println("camera_btn")
-        }
-
-        val gallery_btn = view.findViewById<AppCompatImageButton>(R.id.gallery_btn)
-        gallery_btn.setOnClickListener{
-            activity?.onFragmentChange(7)
-            println("gallery_btn")
-        }
+//        val camera_btn = view.findViewById<AppCompatImageButton>(R.id.camera_btn)
+//        camera_btn.setOnClickListener{
+//            activity?.onFragmentChange(6)
+//            println("camera_btn")
+//        }
+//
+//        val gallery_btn = view.findViewById<AppCompatImageButton>(R.id.gallery_btn)
+//        gallery_btn.setOnClickListener{
+//            activity?.onFragmentChange(7)
+//            println("gallery_btn")
+//        }
 
         return view
     }

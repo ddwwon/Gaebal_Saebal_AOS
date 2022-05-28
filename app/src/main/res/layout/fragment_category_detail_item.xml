@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="2022/05/18 11:40PM"
+        android:fontFamily = "@font/imbplexmono_light"
         android:textSize="10sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -24,6 +25,7 @@
         android:id="@+id/category_detail_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily = "@font/imbplexmono_light"
         android:text="C언어로 스택 구현하기"
         android:textSize="14sp"
         android:textColor="@color/black"
@@ -36,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="#Python #스택"
+        android:fontFamily = "@font/imbplexmono_light"
         android:bufferType="spannable"
         android:textSize="13sp"
         android:textColor="@color/main_purple"

@@ -37,8 +37,9 @@
                 android:layout_marginStart="25sp"
                 android:layout_marginTop="25sp"
                 android:text="내 정보"
+                android:fontFamily = "@font/imbplexmono_light"
                 android:textColor="@color/black"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
         </androidx.appcompat.widget.Toolbar>
@@ -59,7 +60,8 @@
                 android:gravity="left|center"
                 android:paddingLeft="10sp"
                 android:text=" 카테고리 추가/삭제 "
-                android:layout_marginBottom="10sp"
+                android:fontFamily = "@font/imbplexmono_light"
+                android:layout_marginBottom="20sp"
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -67,6 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10sp"
+                android:fontFamily = "@font/imbplexmono_light"
                 android:background="@drawable/category_detail_item_textview_border"
                 android:text=" 깃허브 사용자 설정 "
                 android:gravity="left|center"

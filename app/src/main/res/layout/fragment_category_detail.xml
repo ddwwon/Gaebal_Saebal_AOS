@@ -36,8 +36,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25sp"
                 android:layout_marginTop="25sp"
-                android:text="자료구조"
-                android:textSize="25sp"
+                android:text="BOJ"
+                android:fontFamily = "@font/imbplexmono_light"
+                android:textSize="20sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
 

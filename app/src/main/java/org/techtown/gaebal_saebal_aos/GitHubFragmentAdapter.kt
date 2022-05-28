@@ -23,6 +23,19 @@ class GitHubFragmentAdapter(private val dataSet: ArrayList<GitHubData>):
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(datas[position])
+
+        holder.itemView.setOnClickListener{
+            itemClickListener.onClick(it, position)
+        }
+    }
+
+    interface ItemClickListener {
+        fun onClick(view: View, position: Int)
+    }
+
+    private lateinit var itemClickListener: ItemClickListener
+    fun setItemClickListener(itemClickListener: ItemClickListener) {
+        this.itemClickListener = itemClickListener
     }
 
 

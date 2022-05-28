@@ -5,18 +5,39 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
+import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import okhttp3.internal.Internal
+import okhttp3.internal.Internal.instance
+import org.techtown.gaebal_saebal_aos.databinding.FragmentCategoryModifyBinding
+
+var delete = false
 
 class CategoryModifyFragment: Fragment(){
     private val datas = arrayListOf<CategoryTitleData>()
-    private val githubadapter = CategoryModifyFragmentAdapter(datas)
+    val categorymodifyfragmentadapter = CategoryModifyFragmentAdapter(datas)
     lateinit var recycler: RecyclerView
     lateinit var mLayoutManager: LinearLayoutManager
 
     var activity: MainActivity? = null
+
+    private var binding: FragmentCategoryModifyBinding?=null
+    private val binding2 get() = binding!!
+
+    init {
+        instance = this
+    }
+
+    companion object {
+        private var instance: CategoryModifyFragment?=null
+        fun getInstance():CategoryModifyFragment? {
+            return instance
+        }
+    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -45,22 +66,53 @@ class CategoryModifyFragment: Fragment(){
 
         val back_btn = view.findViewById<ImageButton>(R.id.cate_modify_back_btn)
         back_btn.setOnClickListener{
-            activity?.onFragmentChange(12)
+            activity?.onFragmentChange("MySettingFragment")
             println("카테고리 수정 ")
+        }
+
+        val category_add_btn = view.findViewById<AppCompatButton>(R.id.category_add)
+        category_add_btn.setOnClickListener {
+            activity?.onFragmentChange("CategoryInputDialog")
+        }
+
+        val category_delete_btn = view.findViewById<AppCompatButton>(R.id.category_delete)
+        category_delete_btn.setOnClickListener {
+            activity?.onFragmentChange("DeleteCategory")
         }
 
         setListView()
         return view
     }
 
-    private fun setListView() {
+    var first = true
+
+    fun setListView() {
+
         datas.apply {
-            add(CategoryTitleData("자료구조"))
-            add(CategoryTitleData("백준"))
-            add(CategoryTitleData("AOS"))
-            githubadapter.datas = datas
+            if (first == true && delete == false) {
+                for (i in 0 until category_list.size){
+                    add(CategoryTitleData(category_list[i]))
+                    categorymodifyfragmentadapter.datas = datas
+                    first = false
+                    println("1")
+                }
+            }
+            else if (delete == false && first == false) {
+                add(CategoryTitleData(category_list[category_list.size-1]))
+                categorymodifyfragmentadapter.datas = datas
+                println("2")
+            }
+            else if (delete == true) {
+//                categorymodifyfragmentadapter.datas = datas
+                println("noidjftifsd")
+//                categorymodifyfragmentadapter.notifyDataSetChanged()
+                MainActivity.getInstance()?.onFragmentChange("MySettingFragment")
+                MainActivity.getInstance()?.onFragmentChange("CategoryModifyFragment")
+                delete = false
+
+            }
         }
-        recycler.adapter = githubadapter
+        recycler.adapter = categorymodifyfragmentadapter
     }
 
 }
