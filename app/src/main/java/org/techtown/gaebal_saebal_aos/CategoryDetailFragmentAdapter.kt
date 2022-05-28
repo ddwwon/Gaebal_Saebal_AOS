@@ -33,8 +33,8 @@ class CategoryDetailFragmentAdapter(private val dataSet: ArrayList<CategoryData>
         fun onClick(view: View, position: Int)
     }
 
-    private lateinit var itemClickListener: MyLogFragmentAdapter.ItemClickListener
-    fun setItemClickListener(itemClickLIstener: ItemClickListener) {
+    private lateinit var itemClickListener: CategoryDetailFragmentAdapter.ItemClickListener
+    fun setItemClickListener(itemClickListener: ItemClickListener) {
         this.itemClickListener = itemClickListener
     }
 

@@ -173,6 +173,9 @@ class MainActivity : AppCompatActivity() {
             println("esjdskfjd")
             supportFragmentManager.beginTransaction().replace(R.id.bottom_navigation_frame, MySettingFragment()).commit()
         }
+        else if(index == 13){
+            supportFragmentManager.beginTransaction().replace(R.id.bottom_navigation_frame, LogDetailFragment()).commit()
+        }
     }
 
     // 갤러리에서 이미지 선택하기

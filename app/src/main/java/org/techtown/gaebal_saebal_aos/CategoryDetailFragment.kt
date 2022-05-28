@@ -53,6 +53,12 @@ class CategoryDetailFragment : Fragment() {
             activity?.onFragmentChange(6)
         }
 
+        categoryadapter.setItemClickListener(object: CategoryDetailFragmentAdapter.ItemClickListener{
+            override fun onClick(view: View, position: Int) {
+                activity?.onFragmentChange(13)
+            }
+        })
+
         return view
     }
 
