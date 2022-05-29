@@ -140,24 +140,5 @@ class MyLogFragmentAdapter(private val dataSet: ArrayList<MyLogData>) :
         this.itemClickListener = itemClickListener
     }
 
-    // data를 MyLogdata에 설정한 대로 데이터 지정(?) 이란 말이 맞나,,,
-//    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-//
-//        private val Title: TextView = itemView.findViewById(R.id.my_log_title)
-//        private val Content1: TextView = itemView.findViewById(R.id.my_log_content1)
-//        private val Content2: TextView = itemView.findViewById(R.id.my_log_content2)
-//        private val Content3: TextView = itemView.findViewById(R.id.my_log_content3)
-//        private val Content4: TextView = itemView.findViewById(R.id.my_log_content4)
-//        private val Content5: TextView = itemView.findViewById(R.id.my_log_content5)
-//
-//        fun bind(item: MyLogData) {
-//            Title.text = item.title
-//            Content1.text = item.content1
-//
-//            Content2.text = item.content2
-//            Content3.text = item.content3
-//            Content4.text = item.content4
-//            Content5.text = item.content5
-//        }
-//    }
+
 }

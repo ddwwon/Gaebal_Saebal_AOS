@@ -45,30 +45,28 @@ class CategoryDetailFragment : Fragment() {
 
         val category_detail_write_btn = view.findViewById<ImageButton>(R.id.category_detail_write_btn)
         category_detail_write_btn.setOnClickListener {
-            activity?.onFragmentChange(2)
+            activity?.onFragmentChange("LogWriteFragment")
         }
 
         val back_btn = view.findViewById<ImageButton>(R.id.back_btn)
         back_btn.setOnClickListener {
-            activity?.onFragmentChange(6)
+            activity?.onFragmentChange("MyLogFragment")
         }
+
+        // 원하는 카테고리 선택시 해당 프레그먼트로 전환
+        categoryadapter.setItemClickListener(object : CategoryDetailFragmentAdapter.ItemClickListener {
+            override fun onClick(view: View, position: Int) {
+                activity?.onFragmentChange("LogDetailFragment")
+            }
+        })
 
         return view
     }
 
     private fun setListView() {
         datas.apply {
-            add(CategoryData(date = "2022/01/01 11PM", title = "스택구조1", hashtag = "#c#stack1"))
-            add(CategoryData(date = "2022/01/02 11PM", title = "스택구조2", hashtag = "#c#stack2"))
-            add(CategoryData(date = "2022/01/03 11PM", title = "스택구조3", hashtag = "#c#stack3"))
-            add(CategoryData(date = "2022/01/04 11PM", title = "스택구조4", hashtag = "#c#stack4"))
-            add(CategoryData(date = "2022/01/05 11PM", title = "스택구조5", hashtag = "#c#stack5"))
-            add(CategoryData(date = "2022/01/06 11PM", title = "스택구조6", hashtag = "#c#stack6"))
-            add(CategoryData(date = "2022/01/07 11PM", title = "스택구조7", hashtag = "#c#stack7"))
-            add(CategoryData(date = "2022/01/08 11PM", title = "스택구조8", hashtag = "#c#stack8"))
-            add(CategoryData(date = "2022/01/09 11PM", title = "스택구조9", hashtag = "#c#stack9"))
-            add(CategoryData(date = "2022/01/10 11PM", title = "스택구조10", hashtag = "#c#stack10"))
-
+            add(CategoryData(date = "2022/01/22 17:19", title = "BOJ의 1번째 기록", hashtag = "#JAVA #stack #10828"))
+            add(CategoryData(date = "2022/01/22 17:25", title = "BOJ의 2번째 기록", hashtag = "#JAVA #단어뒤집기 #9093"))
 
             categoryadapter.datas = datas
         }

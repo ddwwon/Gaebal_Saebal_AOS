@@ -16,6 +16,7 @@ class CategoryDetailFragmentAdapter(private val dataSet: ArrayList<CategoryData>
         viewType: Int
     ): ViewHolder {
         val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.fragment_category_detail_item, viewGroup, false)
+
         return ViewHolder(view)
     }
 
@@ -33,8 +34,8 @@ class CategoryDetailFragmentAdapter(private val dataSet: ArrayList<CategoryData>
         fun onClick(view: View, position: Int)
     }
 
-    private lateinit var itemClickListener: MyLogFragmentAdapter.ItemClickListener
-    fun setItemClickListener(itemClickLIstener: ItemClickListener) {
+    private lateinit var itemClickListener: ItemClickListener
+    fun setItemClickListener(itemClickListener: ItemClickListener) {
         this.itemClickListener = itemClickListener
     }
 

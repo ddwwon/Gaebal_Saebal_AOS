@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -27,19 +28,31 @@ class GithubFragment : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view: View = inflater!!.inflate(R.layout.fragment_github, container, false)
-        recycler = view.findViewById(R.id.github_list_frame)
-        mLayoutManager = LinearLayoutManager(view.context)
+//        recycler = view.findViewById(R.id.github_list_frame)
+//        mLayoutManager = LinearLayoutManager(view.context)
+//
+//        mLayoutManager.orientation = LinearLayoutManager.VERTICAL
+//        recycler.layoutManager = mLayoutManager
 
-        mLayoutManager.orientation = LinearLayoutManager.VERTICAL
-        recycler.layoutManager = mLayoutManager
+//        setListView()
+        val gitgub_frame = view.findViewById<LinearLayout>(R.id.gitgub_frame)
 
-        setListView()
+        gitgub_frame.setOnClickListener{
+            dismiss()
+        }
+
         return view
+    }
+
+    override fun dismiss() {
+        super.dismiss()
+        println("dismisswork")
+        MainActivity.getInstance()?.onFragmentChange("GithubInput")
     }
 
     private fun setListView() {
         datas.apply {
-            add(GitHubData(date = "2022/01/01 11PM", title = "그냥 다 조졌어1", type = "issue", repo = "ddwwon/jojo1"))
+            add(GitHubData(date = "2022/03/07 13:43", title = "", type = "issue", repo = "ddwwon/jojo1"))
             add(GitHubData(date = "2022/01/02 11PM", title = "그냥 다 조졌어2", type = "issue", repo = "ddwwon/jojo2"))
             add(GitHubData(date = "2022/01/03 11PM", title = "그냥 다 조졌어3", type = "issue", repo = "ddwwon/jojo3"))
             add(GitHubData(date = "2022/01/04 11PM", title = "그냥 다 조졌어4", type = "issue", repo = "ddwwon/jojo4"))
@@ -48,9 +61,5 @@ class GithubFragment : BottomSheetDialogFragment() {
             githubadapter.datas = datas
         }
         recycler.adapter = githubadapter
-    }
-
-    companion object {
-        const val TAG = "GithubFragment"
     }
 }

@@ -3,6 +3,67 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.299" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/Splash_background.xml" value="0.138" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/category_choice_btn_outline_selector.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/category_choice_btn_text_selector.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/category_detail_item_textview_border.xml" value="0.274" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/code_icon.xml" value="0.261" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/commit_icon.xml" value="0.331" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/detail_rounded_view.xml" value="0.1" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/fall_background.xml" value="0.3385" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/folder_icon.xml" value="0.299" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/gradient_color.xml" value="0.331" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.299" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/issue_icon.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/log_detail_background.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/log_write_buttom_border.xml" value="0.331" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/log_write_icon.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/logo_background.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/more_option_icon.xml" value="0.331" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/my_information.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/my_log.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/my_log_fragment_list_layout.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/my_log_fragment_textview_underline.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/pull_request_icon.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/register_btn.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/register_icon.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/save_btn.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/search_edittext_border.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/setting_icon.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/drawable/text_gradient.xml" value="0.353" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/font/ibm.xml" value="0.32447916666666665" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/font/imp.xml" value="0.13425925925925927" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/activity_main.xml" value="0.2265625" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/activity_splash.xml" value="0.36231884057971014" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/boj_problem_dialog.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/category_input.xml" value="0.2015625" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/delete_or_not_modal.xml" value="0.33559782608695654" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/floating_btn_dialog.xml" value="0.3283514492753623" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_camera_and_gallery.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_category_detail.xml" value="0.1" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_category_detail_item.xml" value="0.10925925925925926" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_category_modify.xml" value="0.22" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_category_modify_item.xml" value="0.10925925925925926" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_github.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_github_item.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_go_git_set.xml" value="0.19610507246376813" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_log_detail.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_log_modify.xml" value="0.12018140589569161" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_log_write.xml" value="0.28359846407021394" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_log.xml" value="0.1" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_log_item.xml" value="0.10925925925925926" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_log_item2.xml" value="0.10925925925925926" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_log_item3.xml" value="0.10925925925925926" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_log_item4.xml" value="0.10925925925925926" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_log_item5.xml" value="0.10925925925925926" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_my_setting.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/fragment_search.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/register_success_dialog.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/text_over_dialog.xml" value="0.19610507246376813" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/layout/text_zero_dialog.xml" value="0.19610507246376813" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/menu/bottom_menu.xml" value="0.2265625" />
+        <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS/app/src/main/res/mipmap-anydpi-v26/fall.xml" value="0.274" />
         <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/drawable/category_detail_item_textview_border.xml" value="0.1765" />
         <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/drawable/code_icon.xml" value="0.2275" />
         <entry key="..\:/Users/Dowon/Documents/GitHub/Gaebal_Saebal_AOS_test_ver/Backup_ver/Gaebal_Saebal_AOS/app/src/main/res/drawable/ic_code_icon.xml" value="0.2275" />

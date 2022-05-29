@@ -57,14 +57,15 @@ class MyLogFragment : Fragment(){
         // 원하는 카테고리 선택시 해당 프레그먼트로 전환
         myLogadapter.setItemClickListener(object : MyLogFragmentAdapter.ItemClickListener {
             override fun onClick(view: View, position: Int) {
-                activity?.onFragmentChange(1)
+                activity?.onFragmentChange("CategoryDetailFragment")
             }
         })
+
 
         // 기록 작성 버튼 클릭시, 기록 작성 프레그먼트로 전환
         val btn_log_write = view.findViewById<ImageButton>(R.id.log_write_btn)
         btn_log_write.setOnClickListener {
-            activity?.onFragmentChange(2)
+            activity?.onFragmentChange("LogWriteFragment")
         }
         return view
     }
@@ -72,17 +73,11 @@ class MyLogFragment : Fragment(){
     // MyLogData의 형태에 맞게 데이터 입력
     private fun setListView() {
         datas.apply {
-//            add(MyLogData(title = "BOJ", content1 = "흠냐륑", content2 = "", content3 = "", content4 = "", content5 = "") )
-//            add(MyLogData(title = "BOJ", content1 = "흠냐륑", content2 = "", content3 = "", content4 = "", content5 = "") )
-//            add(MyLogData(title = "BOJ1", content1 = "흠냐륑1", content2 = "버블버블1", content3 = "", content4 = "", content5 = ""))
-//            add(MyLogData(title = "BOJ2", content1 = "흠냐륑2", content2 = "버블버블2", content3 = "니나노", content4 = "", content5 = ""))
-//            add(MyLogData(title = "BOJ3", content1 = "흠냐륑3",  content2 = "버블버블3", content3 = "니나노1", content4 = "ㅇ아아", content5 = ""))
-//            add(MyLogData(title = "BOJ4", content1 = "흠냐륑4", content2 = "버블버블4", content3 = "ㄴ나노2", content4 = "아아아", content5 = "nulㅇㄹ알"))
-            add(MyLogData(1, "자료구조", "연결리스트 종류", null, null, null, null))
-            add(MyLogData(2, "AOS", "동적으로 데이터 할당 개빢새", "이게 실활까?", null, null, null))
-            add(MyLogData(3, "CS", "운영체제", "리눅스", "컴퓨터 구조", null, null))
-            add(MyLogData(4, "미정", "untitle1", "untitle2", "untitle3", "untitle4", null))
-            add(MyLogData(5, "일기", "킹받아", "어쩔시크릿쥬쥬", "코난", "벼락부자", "노트북 샀다"))
+            add(MyLogData(title_default.size, category_list[0], title_default[0], title_default[1], title_default[2], title_default[3], null))
+            add(MyLogData(title_aos.size, category_list[1], title_aos[0], title_aos[1], null, null, null))
+            add(MyLogData(title_boj.size, category_list[2], title_boj[0], title_boj[1], null, null, null))
+            add(MyLogData(title_data.size, category_list[3], title_data[0], title_data[1], title_data[2], title_data[3], null))
+            add(MyLogData(title_ai.size, category_list[4], title_ai[0], title_ai[1], title_ai[2], title_ai[3], title_ai[4]))
 
             myLogadapter.datas = datas
             myLogadapter.notifyDataSetChanged()

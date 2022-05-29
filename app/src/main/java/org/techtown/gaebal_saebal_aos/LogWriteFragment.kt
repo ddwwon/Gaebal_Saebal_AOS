@@ -9,11 +9,15 @@ import android.text.Editable
 import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat.getSystemService
 
 
 class LogWriteFragment : Fragment()  {
@@ -40,43 +44,70 @@ class LogWriteFragment : Fragment()  {
     ): View? {
         val view: View = inflater!!.inflate(R.layout.fragment_log_write, container, false)
         val image_cancel_btn = view.findViewById<AppCompatButton>(R.id.image_cancle_btn)
-        image_cancel_btn.visibility = View.INVISIBLE
+        val baekjoon_view = view.findViewById<ConstraintLayout>(R.id.baekjoon_view)
+        val github_view = view.findViewById<ConstraintLayout>(R.id.github_view)
+        val baekjoon_btn = view.findViewById<AppCompatButton>(R.id.baekjoon_btn)
+        val github_btn = view.findViewById<AppCompatButton>(R.id.github_btn)
+        val picture_framelayout = view.findViewById<FrameLayout>(R.id.picture_framelayout)
+        val picture_btn = view.findViewById<AppCompatButton>(R.id.image_btn)
+        val log_write_main_text = view.findViewById<EditText>(R.id.log_write_main_text)
+        val log_write_linear = view.findViewById<LinearLayout>(R.id.log_write_linear)
+        val log_write_code_text = view.findViewById<EditText>(R.id.log_write_code_text)
+        val tag_input = view.findViewById<EditText>(R.id.tag_input)
+
+        image_cancel_btn.visibility = View.GONE
+        baekjoon_view.visibility = View.GONE
+        github_view.visibility = View.GONE
+        picture_framelayout.visibility = View.GONE
+
+        log_write_code_text.setOnClickListener {
+            hideKeyBoard()
+        }
+
+        log_write_main_text.setOnClickListener{
+            hideKeyBoard()
+            println("wordlfkdf?")
+        }
+
+        tag_input.setOnClickListener {
+            hideKeyBoard()
+        }
+
+
 
         // 깃허브에 + 버튼 클릭시 하단에서 bottom sheet이 나오면서 최근 이슈, 풀, 커밋 리스트가 나온다
-        val github_btn = view.findViewById<AppCompatButton>(R.id.github)
         github_btn.setOnClickListener {
-            activity?.onFragmentChange(3)
+            activity?.onFragmentChange("GitHubFragment")
         }
 
         // 백준에 + 버튼 클릭시 백준 번호를 입력하는 modal 창이 나온다.
-        val boj_btn = view.findViewById<AppCompatButton>(R.id.baekjoon)
-        boj_btn.setOnClickListener{
-            activity?.onFragmentChange(4)
+        baekjoon_btn.setOnClickListener{
+            activity?.onFragmentChange("BojDialog")
         }
 
         // 사진 추가하기 버튼을 누르면 갤러리, 사진 찍기를 선택하는 bottom sheet이 나온다.
-        val pic_btn = view.findViewById<AppCompatButton>(R.id.picture_btn)
-        pic_btn.setOnClickListener {
+        picture_btn.setOnClickListener {
 //            activity?.onFragmentChange(5)
-            val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
-            startActivityForResult(gallery, pickImage)
+            picture_btn.visibility = View.GONE
+            picture_framelayout.visibility = View.VISIBLE
+//            val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+//            startActivityForResult(gallery, pickImage)
 
         }
 
         // 취소하기 옆의 뒤로가기 버튼을 누르면 내 기록 프레그먼트로 이동한다.
         val back_btn = view.findViewById<ImageButton>(R.id.back_btn)
         back_btn.setOnClickListener {
-            activity?.onFragmentChange(6)
+            activity?.onFragmentChange("MyLogFragment")
         }
 
         // 등록 버튼을 누르면 내 기록 프레그먼트로 이동한다.
         val log_write_register_btn = view.findViewById<Button>(R.id.log_write_register_btn)
         log_write_register_btn.setOnClickListener{
-            activity?.onFragmentChange(6)
+            activity?.onFragmentChange("MyLogFragment")
         }
 
         // 본문 글자수 카운트
-        val log_write_main_text = view.findViewById<EditText>(R.id.log_write_main_text)
         val char_cnt = view.findViewById<TextView>(R.id.char_cnt)
         log_write_main_text.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -92,16 +123,15 @@ class LogWriteFragment : Fragment()  {
                 var userinput = log_write_main_text.text.toString()
                 char_cnt.text = userinput.length.toString() + " /1000"
                 if (userinput.length >= 1000) {
-                    activity?.onFragmentChange(8)
+                    activity?.onFragmentChange("TextOverDialog")
                 }
                 if (userinput.length == 0) {
-                    activity?.onFragmentChange(9)
+                    activity?.onFragmentChange("TextZeroDialog")
                 }
             }
         })
 
         // 코드 글자수 카운트
-        val log_write_code_text = view.findViewById<EditText>(R.id.log_write_code_text)
         val code_char_cnt = view.findViewById<TextView>(R.id.code_char_cnt)
         log_write_code_text.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -117,10 +147,10 @@ class LogWriteFragment : Fragment()  {
                 var userinput = log_write_code_text.text.toString()
                 code_char_cnt.text = userinput.length.toString() + " /1000"
                 if (userinput.length >= 1000) {
-                    activity?.onFragmentChange(8)
+                    activity?.onFragmentChange("TextOverDialog")
                 }
                 if (userinput.length == 0) {
-                    activity?.onFragmentChange(9)
+                    activity?.onFragmentChange("TextZeroDialog")
                 }
             }
         })
@@ -137,5 +167,17 @@ class LogWriteFragment : Fragment()  {
             imageview?.setImageURI(imageUri)
         }
     }
+
+//    override fun onTouchEvent(event: MotionEvent): Boolean {
+//        val imm: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//        imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+//        return true
+//    }
+
+    private fun hideKeyBoard() {
+        val imm = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(requireActivity().currentFocus?.windowToken, 0)
+    }
+
 
 }

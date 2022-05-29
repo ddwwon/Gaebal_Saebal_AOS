@@ -11,6 +11,7 @@
         android:id="@+id/text_over_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily = "@font/imbplexmono_light"
         android:text="글자 수가 1000자가 넘었습니다.\n1000자 이하로 작성해주세요!"
         android:textStyle="bold"
         android:gravity="center"
@@ -29,6 +30,7 @@
         android:backgroundTint="@color/white"
         android:textColor="@color/main_blue"
         app:layout_constraintTop_toBottomOf="@id/text_over_dialog"
+        android:fontFamily = "@font/imbplexmono_light"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:text="확인" />

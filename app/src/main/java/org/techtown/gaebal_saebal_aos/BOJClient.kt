@@ -1,15 +1,13 @@
 package org.techtown.gaebal_saebal_aos
 
 import com.google.gson.annotations.SerializedName
-import io.reactivex.Single
-import okhttp3.OkHttpClient
-import retrofit2.Call
+//import io.reactivex.Single
+//import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.GET
-import retrofit2.http.Path
-import retrofit2.http.Query
+import okhttp3.*
+import retrofit2.http.*
 
 class BOJClient {
     companion object {
@@ -24,11 +22,19 @@ class BOJClient {
     }
 }
 
-data class BOJ(
+data class bjNumber(
     @SerializedName("bjNumber") val bjNumber: Int
 )
 
+data class title (
+    @SerializedName("Title") val Title: String
+)
+
 interface BOJServices {
-    @GET("/{bjNumber}")
-    fun getNum(@Query("bjNumber") bjNumber: Int) : Call<BOJ>
+    @GET("{bjNumber")
+    fun getBOJNumber (
+        @Path("bjNumber") bjNumber: Int?
+    )
 }
+
+

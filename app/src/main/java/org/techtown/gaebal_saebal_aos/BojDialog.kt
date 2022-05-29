@@ -4,12 +4,16 @@ import android.app.Dialog
 import android.content.Context
 import android.view.WindowManager
 import android.widget.EditText
+import androidx.annotation.MainThread
+import androidx.appcompat.widget.AppCompatButton
+import androidx.constraintlayout.widget.ConstraintLayout
 import kotlinx.android.synthetic.main.boj_problem_dialog.*
 
 class BojDialog (context: Context) {
 
     private val dialog = Dialog(context)
     private lateinit var onClickListener: OnDialogClickListener
+    var activity: MainActivity? = null
 
     fun setOnClickListener(listener: OnDialogClickListener)
     {
@@ -23,6 +27,7 @@ class BojDialog (context: Context) {
         dialog.setCanceledOnTouchOutside(true)
         dialog.setCancelable(true)
         dialog.show()
+//        activity?.onFragmentChange(14)
 
         dialog.boj_cancel_btn.setOnClickListener{
             dialog.dismiss()
@@ -30,6 +35,7 @@ class BojDialog (context: Context) {
 
         dialog.boj_ok_btn.setOnClickListener{
             dialog.dismiss()
+            MainActivity.getInstance()?.onFragmentChange("BojNumInput")
         }
     }
     interface OnDialogClickListener {

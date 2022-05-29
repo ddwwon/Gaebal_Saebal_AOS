@@ -32,6 +32,11 @@ class CategoryModifyFragmentAdapter(private val dataSet: ArrayList<CategoryTitle
         }
     }
 
+    fun removeItem(position: Int) {
+        category_list.removeAt(position)
+        CategoryModifyFragment.getInstance()?.setListView()
+    }
+
     // 카테고리 클릭 리스너
     interface ItemClickListener {
         fun onClick(view: View, position: Int)

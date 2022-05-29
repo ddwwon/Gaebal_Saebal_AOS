@@ -35,7 +35,12 @@ class GoGitSetFragment : Fragment() {
 
         val back_btn = view.findViewById<ImageButton>(R.id.back_btn)
         back_btn.setOnClickListener{
-            activity?.onFragmentChange(12)
+            activity?.onFragmentChange("MySettingFragment")
+        }
+
+        val save_btn = view.findViewById<ImageButton>(R.id.saveToken)
+        save_btn.setOnClickListener {
+            activity?.onFragmentChange("RegisterSuccessDialog")
         }
 
         return view
