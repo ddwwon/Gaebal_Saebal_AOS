@@ -14,8 +14,7 @@
         android:textColor="@color/black"
         android:text="자료구조"
         android:fontFamily = "@font/imbplexmono_light"
-        android:textStyle="bold"
-        android:elevation="10sp"/>
+        android:textStyle="bold"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

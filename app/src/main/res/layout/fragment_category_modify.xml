@@ -66,6 +66,7 @@
                 android:layout_gravity="right"
                 android:layout_margin="10sp"
                 android:elevation="10sp"
+                android:textColor="@color/main_blue"
                 android:background="@drawable/category_detail_item_textview_border"
                 android:text="추가하기" />
 
@@ -76,6 +77,7 @@
                 android:layout_gravity="right"
                 android:layout_margin="10sp"
                 android:elevation="10sp"
+                android:textColor="@color/red"
                 android:background="@drawable/category_detail_item_textview_border"
                 android:text="삭제하기" />
 

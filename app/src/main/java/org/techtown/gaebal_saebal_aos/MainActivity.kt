@@ -16,7 +16,9 @@ import android.text.Spanned
 import android.text.TextUtils
 import android.util.Log
 import android.view.Gravity
+import android.view.MotionEvent
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -60,6 +62,8 @@ class MainActivity : AppCompatActivity() {
     private val pickImage = 100
     private var imageUri: Uri? = null
 
+//    var imm: InputMethodManager? = null
+
     init {
         instance = this
     }
@@ -74,6 +78,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+//        imm = getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as InputMethodManager?
 
 //         GitHub Api: public인 repository의 pull, issue의 title, created_date, user_name 불러와용갈갈갈
 //        GithubClient.getApi().getRepos("13wjdgk")
@@ -95,6 +101,62 @@ class MainActivity : AppCompatActivity() {
 //                    println("not work,,bb")
 //                }
 //            })
+//        var bjNumber = 4949
+//
+////        BOJClient.getApi().getBOJNumber(bjNumber)
+////            .subscribeOn(Schedulers.io())
+////            .observeOn(AndroidSchedulers.mainThread())
+////            .subscribe({items ->
+////                items.forEach {println(it)}
+////            }, {e ->
+////                println(e.toString())
+////            })
+//
+//        var auth = "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"
+//        var selectedRepoOwner = "leeyi1203"
+//        var selectedRepo = "GAEBAL_SAEBAL_iOS"
+//        GithubClient.getApi().getRepos(auth)
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(AndroidSchedulers.mainThread())
+//            .subscribe({items ->
+//                items.forEach {println(it)}
+//            }, {e ->
+//                println(e.toString())
+//            })
+//
+//        GithubClient.getApi().getIssues(auth,
+//            selectedRepoOwner,
+//            selectedRepo)
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(AndroidSchedulers.mainThread())
+//            .subscribe({items ->
+//                items.forEach {println(it)}
+//            }, {e ->
+//                println(e.toString())
+//            })
+//
+//        GithubClient.getApi().getPRs(auth,
+//            selectedRepoOwner,
+//            selectedRepo)
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(AndroidSchedulers.mainThread())
+//            .subscribe({items ->
+//                items.forEach {println(it)}
+//            }, {e ->
+//                println(e.toString())
+//            })
+//
+//        GithubClient.getApi().getCommits(auth,
+//            selectedRepoOwner,
+//            selectedRepo)
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(AndroidSchedulers.mainThread())
+//            .subscribe({items ->
+//                items.forEach {println(it)}
+//            }, {e ->
+//                println(e.toString())
+//            })
+
     }
 
     override fun onResume() {
@@ -128,7 +190,6 @@ class MainActivity : AppCompatActivity() {
     fun onFragmentChange(index: String) {
         when(index) {
             "CategoryDetailFragment" -> {
-                // myLog에서 카테고리를 선택하면 해당 카테고리 프레그먼트로 전환
                 supportFragmentManager.beginTransaction().replace(R.id.bottom_navigation_frame, CategoryDetailFragment()).commit()
             }
             "LogWriteFragment" -> {
@@ -276,4 +337,11 @@ class MainActivity : AppCompatActivity() {
 //            }
 //        }
     }
+
+//    fun hideKeyboard(v: View) {
+//        if(v != null) {
+//            imm?.hideSoftInputFromWindow(v.windowToken, 0)
+//            println("hidekeyboard")
+//        }
+//    }
 }

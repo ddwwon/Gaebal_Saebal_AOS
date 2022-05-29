@@ -10,7 +10,7 @@ import retrofit2.http.*
 
 class GithubClient {
     companion object {
-        private const val BASE_URL = "https://api.github.com"
+        private const val BASE_URL = "https://api.github.com/"
         fun getApi(): GithubService = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(OkHttpClient())
@@ -21,16 +21,70 @@ class GithubClient {
     }
 }
 
-data class GithubRepo( // public 한정^^ ㅎㅎ 유저 아이디만 알면 되용갈갈
-    @SerializedName("name") val name: String, // repository title
-    @SerializedName("html_url") val url: String,
-    @SerializedName("issues_url") val issue: String,
-    @SerializedName("pulls_url") val pull: String,
-    @SerializedName("title") val title: String, // pull or issue title
-    @SerializedName("created_at") val created_at: String
+data class Owner(
+    @SerializedName("login") val login: String, // 레포주인 이름
 )
 
-interface GithubService {
-    @GET("users/{owner}/repos")
-    fun getRepos(@Path("owner") owner: String) : Single<List<GithubRepo>>
+data class GithubRepo(
+    @SerializedName("name") val name: String, // repository title
+    @SerializedName("full_name") val full_name: String,
+    @SerializedName("owner") val issue: Owner,
+    @SerializedName("login") val pull: String,
+)
+
+data class GitHubIssue(
+    @SerializedName("number") val number: Int,
+    @SerializedName("title") val title: String,
+    @SerializedName("created_at") val create_at: String,
+)
+
+data class GitHubPR(
+    @SerializedName("number") val name: Int,
+    @SerializedName("title") val url: String,
+    @SerializedName("created_at") val issue: String,
+)
+
+//여기부턴 다 커밋 구조체
+data class AutAuthor(
+    @SerializedName("date") val date: String,
+)
+
+data class Commit(
+    @SerializedName("author") val author: AutAuthor,
+    @SerializedName("message") val message: String,
+)
+
+data class GitHubCommit(
+    @SerializedName("commit") val commit: Commit,
+    @SerializedName("sha") val sha: String,
+)
+
+public interface GithubService {
+    @GET("user/repos")
+    fun getRepos(
+        @Header("Authorization") auth:String?
+    ) : Single<List<GithubRepo>>
+
+    @GET("repos/{user}/{repo}/issues?state=all&page=1&per_page=15")
+    fun getIssues(
+        @Header("Authorization") auth:String?,
+        @Path("user") user: String?,
+        @Path("repo") repo: String?
+    ) : Single<List<GitHubIssue>>
+
+    @GET("repos/{user}/{repo}/pulls?state=all&page=1&per_page=10")
+    fun getPRs(
+        @Header("Authorization") auth:String?,
+        @Path("user") user: String?,
+        @Path("repo") repo: String?
+    ) : Single<List<GitHubPR>>
+
+    @GET("repos/{user}/{repo}/commits?page=1&per_page=10")
+    fun getCommits(
+        @Header("Authorization") auth:String?,
+        @Path("user") user: String?,
+        @Path("repo") repo: String?
+    ) : Single<List<GitHubCommit>>
 }
+
+

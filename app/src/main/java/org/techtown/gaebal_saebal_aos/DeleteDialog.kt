@@ -39,18 +39,18 @@ class DeleteDialog (context: Context) {
 //            val categorymodifyfragment: CategoryModifyFragment =
             var name = dialog.findViewById<EditText>(R.id.delete_name)
             var input = name.text.toString()
-//            for (i in 0 until category_list.size) {
-//                if (category_list[i] == input) {
-//                    println(category_list[i])
-//                    category_list.removeAt(i)
-//                    println("delete dialog")
-//
-//                }
-//            }
+            for (i in 0 until category_list.size) {
+                if (category_list[i] == input) {
+                    println(category_list[i])
+                    category_list.removeAt(i)
+                    println("delete dialog")
+
+                }
+            }
             delete = true
 
-            var delete_item = category_list.lastIndex
-            category_list.removeAt(delete_item)
+//            var delete_item = category_list.lastIndex
+//            category_list.removeAt(delete_item)
             CategoryModifyFragment.getInstance()?.setListView()
         }
     }

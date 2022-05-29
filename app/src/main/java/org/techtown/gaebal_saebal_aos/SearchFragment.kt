@@ -38,10 +38,15 @@ class SearchFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_search, container, false)
         val search_result = view.findViewById<ConstraintLayout>(R.id.search_result)
         val search_btn = view.findViewById<ImageButton>(R.id.search_btn)
+        val search_result2 = view.findViewById<ConstraintLayout>(R.id.search_result2)
+
         search_result.visibility = GONE
+        search_result2.visibility = GONE
+
 
         search_btn.setOnClickListener {
             search_result.visibility = View.VISIBLE
+            search_result2.visibility = View.VISIBLE
         }
 
         return view

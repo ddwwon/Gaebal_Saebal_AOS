@@ -30,7 +30,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Gaebal_Saebal_AOS">
+            android:theme="@style/Theme.Gaebal_Saebal_AOS"
+            android:windowSoftInputMode="adjustResize">
+
+<!--            android:windowSoftInputMode="adjustResize" : 키보드 내리기하기 위해서 존재-->
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 

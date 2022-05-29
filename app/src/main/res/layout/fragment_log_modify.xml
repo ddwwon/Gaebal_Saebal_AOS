@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".LogWriteFragment"
+    tools:context=".LogModifyFragment"
     android:id="@+id/log_write_frame">
 
     <LinearLayout
@@ -22,7 +22,7 @@
             tools:ignore="MissingConstraints">
 
             <ImageButton
-                android:id="@+id/back_btn"
+                android:id="@+id/modify_back_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
@@ -36,13 +36,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25sp"
                 android:layout_marginTop="25sp"
-                android:text="기록 작성"
+                android:text="기록 수정"
                 android:fontFamily = "@font/imbplexmono_light"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <android.widget.Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/log_modify_register_btn"
                 android:layout_width="70sp"
                 android:layout_height="50sp"
@@ -150,7 +150,7 @@
                 </HorizontalScrollView>
 
                 <EditText
-                    android:id="@+id/log_write_main_text"
+                    android:id="@+id/log_modify_main_text"
                     android:layout_width="match_parent"
                     android:layout_height="300sp"
                     android:layout_margin="10sp"
@@ -180,6 +180,7 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:id="@+id/tag_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10sp"
@@ -381,7 +382,7 @@
                     android:layout_height="wrap_content">
 
                     <EditText
-                        android:id="@+id/log_write_code_text"
+                        android:id="@+id/log_moodify_code_text"
                         android:layout_width="match_parent"
                         android:layout_height="200sp"
                         android:layout_margin="10sp"

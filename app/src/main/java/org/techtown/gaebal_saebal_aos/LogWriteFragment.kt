@@ -9,12 +9,15 @@ import android.text.Editable
 import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat.getSystemService
 
 
 class LogWriteFragment : Fragment()  {
@@ -47,11 +50,30 @@ class LogWriteFragment : Fragment()  {
         val github_btn = view.findViewById<AppCompatButton>(R.id.github_btn)
         val picture_framelayout = view.findViewById<FrameLayout>(R.id.picture_framelayout)
         val picture_btn = view.findViewById<AppCompatButton>(R.id.image_btn)
+        val log_write_main_text = view.findViewById<EditText>(R.id.log_write_main_text)
+        val log_write_linear = view.findViewById<LinearLayout>(R.id.log_write_linear)
+        val log_write_code_text = view.findViewById<EditText>(R.id.log_write_code_text)
+        val tag_input = view.findViewById<EditText>(R.id.tag_input)
 
         image_cancel_btn.visibility = View.GONE
         baekjoon_view.visibility = View.GONE
         github_view.visibility = View.GONE
         picture_framelayout.visibility = View.GONE
+
+        log_write_code_text.setOnClickListener {
+            hideKeyBoard()
+        }
+
+        log_write_main_text.setOnClickListener{
+            hideKeyBoard()
+            println("wordlfkdf?")
+        }
+
+        tag_input.setOnClickListener {
+            hideKeyBoard()
+        }
+
+
 
         // 깃허브에 + 버튼 클릭시 하단에서 bottom sheet이 나오면서 최근 이슈, 풀, 커밋 리스트가 나온다
         github_btn.setOnClickListener {
@@ -86,7 +108,6 @@ class LogWriteFragment : Fragment()  {
         }
 
         // 본문 글자수 카운트
-        val log_write_main_text = view.findViewById<EditText>(R.id.log_write_main_text)
         val char_cnt = view.findViewById<TextView>(R.id.char_cnt)
         log_write_main_text.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -111,7 +132,6 @@ class LogWriteFragment : Fragment()  {
         })
 
         // 코드 글자수 카운트
-        val log_write_code_text = view.findViewById<EditText>(R.id.log_write_code_text)
         val code_char_cnt = view.findViewById<TextView>(R.id.code_char_cnt)
         log_write_code_text.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -147,5 +167,17 @@ class LogWriteFragment : Fragment()  {
             imageview?.setImageURI(imageUri)
         }
     }
+
+//    override fun onTouchEvent(event: MotionEvent): Boolean {
+//        val imm: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//        imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+//        return true
+//    }
+
+    private fun hideKeyBoard() {
+        val imm = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(requireActivity().currentFocus?.windowToken, 0)
+    }
+
 
 }

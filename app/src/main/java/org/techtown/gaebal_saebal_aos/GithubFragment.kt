@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -34,18 +35,18 @@ class GithubFragment : BottomSheetDialogFragment() {
 //        recycler.layoutManager = mLayoutManager
 
 //        setListView()
+        val gitgub_frame = view.findViewById<LinearLayout>(R.id.gitgub_frame)
 
-        githubadapter.setItemClickListener(object : GitHubFragmentAdapter.ItemClickListener {
-            override fun onClick(view: View, position: Int) {
-                dismiss()
-            }
-        })
+        gitgub_frame.setOnClickListener{
+            dismiss()
+        }
 
         return view
     }
 
     override fun dismiss() {
         super.dismiss()
+        println("dismisswork")
         MainActivity.getInstance()?.onFragmentChange("GithubInput")
     }
 

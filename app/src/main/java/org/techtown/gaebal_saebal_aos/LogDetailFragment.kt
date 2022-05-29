@@ -38,7 +38,7 @@ class LogDetailFragment : Fragment() {
         val floting_btn = view.findViewById<AppCompatButton>(R.id.floating_btn)
 
         log_detail_back_btn.setOnClickListener {
-            activity?.onFragmentChange("MyLogFragment")
+            activity?.onFragmentChange("CategoryDetailFragment")
         }
 
         floting_btn.setOnClickListener {
